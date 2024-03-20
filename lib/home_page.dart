@@ -33,6 +33,10 @@ class LeafBorderText extends StatelessWidget {
   const LeafBorderText(
       {super.key, this.text = 'halo dunia', this.imgCode = '1'});
 
+  void handleButton() {
+    print("Saya dipencet");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -47,7 +51,7 @@ class LeafBorderText extends StatelessWidget {
           children: [
             Image(
                 image: NetworkImage(
-                    'https://picsum.photos/100/100/?random=$imgCode')),
+                    'https://picsum.photos/50/50/?random=$imgCode')),
             const SizedBox(
               width: 8,
             ),
@@ -58,6 +62,10 @@ class LeafBorderText extends StatelessWidget {
                   color: Color.fromARGB(255, 27, 124, 153),
                   fontWeight: FontWeight.bold),
             ),
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                    onPressed: handleButton, child: const Text('Pencet Saya')))
           ],
         ),
       ),
