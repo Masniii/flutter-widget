@@ -47,10 +47,11 @@ class LeafBorderText extends StatelessWidget {
           children: [
             Image(
                 image: NetworkImage(
-                    'https://picsum.photos/200/300/?random=$imgCode')),
+                    'https://picsum.photos/100/100/?random=$imgCode')),
             const SizedBox(
               width: 8,
             ),
+            Icon(Icons.settings_accessibility),
             Text(
               text,
               style: const TextStyle(
